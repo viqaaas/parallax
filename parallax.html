@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PARALLAX</title>
+  </head>
+  <style>
+    header {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      transform-style: inherit;
+      z-index: -1;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      background: url(https://www.giztop.com/news/wp-content/uploads/2020/11/OnePlus-8T-Cyberpunk-2077-Limited-Edition.jpg)
+        top center;
+      background-size: cover;
+      transform: translateZ(-1px) scale(2.1);
+      min-height: 100%;
+      z-index: -2;
+      background-position-y: 0vh;
+      background-position-x: right;
+    }
+
+    section {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      position: relative;
+      transform-style: inherit;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .section1 {
+      background: #460e0e;
+
+      background-image: url(https://4dim.ru/wp-content/uploads/oneplus-8t-cyberpunk-2077-limited-edition-vypushhen-za-3999-yuanej-597-dollarov_5f9fca8ccd0b8.jpeg);
+      box-shadow: 0 0 200px rgb(168, 0, 0);
+      background-position-x: left;
+      background-position: right;
+      background-size: cover;
+      z-index: 1;
+
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .section2::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      background: url(https://www.cnet.com/a/img/6t_T8kq3NJyb9tyzpbqsWbJFrxs=/2020/10/08/ec2ddbac-c600-4bf9-9cd3-d3d6ff72d37f/oneplus-8t-product-promo-hoyle-34.jpg);
+
+      background-size: cover;
+      transform: translateZ(-0.5px) scale(1.6);
+      z-index: -1;
+      box-shadow: 0 0 200px rgb(168, 0, 0);
+
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .section3 {
+      background: #460e0e;
+
+      background-image: url(https://www.businessinsider.in/thumb.cms?msid=79153134&width=1200&height=900);
+      box-shadow: 0 0 200px rgb(168, 0, 0);
+      z-index: 1;
+      background-position-x: center;
+      background-position-y: center;
+      background-position: center;
+      box-shadow: 0 0 200px rgb(168, 0, 0);
+      z-index: 1;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .section4 {
+      display: flex;
+      background: url(https://fdn.gsmarena.com/imgroot/reviews/20/oneplus-8t/lifestyle/-1200w5/gsmarena_033.jpg);
+      background-position-x: center;
+      background-position-y: center;
+      background-size: cover;
+    }
+
+    .section5 {
+      background: url(https://www.powerplanetonline.com/cdnassets/oneplus_8t_8gb_128gb_09_ad_l.jpg);
+      background-size: cover;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    h1 {
+      font-size: 4rem;
+      text-justify: inherit;
+      text-align: center;
+      position: absolute;
+      padding: 0.4rem;
+      background: #ffffff;
+      box-shadow: 0 0 20px #333;
+      top: 50%;
+      left: 50%;
+      transform: translateZ(-1px) scale(2) translate(-25%, -25%);
+      opacity: 50%;
+    }
+
+    .section1 h1 {
+      z-index: 3;
+      font-weight: 600;
+      opacity: 40%;
+      box-sizing: content-box;
+
+      transform: translate(-50%, -50%);
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+
+    .section2 h1 {
+      transform: translateZ(-0.3px) scale(1.3) translate(-39%, -39%);
+      z-index: 3;
+    }
+
+    .section3 h1 {
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 200px rgb(168, 0, 0);
+    }
+
+    .section4 h1 {
+      z-index: 3;
+      font-weight: 600;
+      opacity: 40%;
+      box-sizing: content-box;
+
+      transform: translate(-50%, -50%);
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: x-large;
+    }
+
+    .section5 h1 {
+      background-color: transparent;
+      color: red;
+    }
+
+    *::before,
+    *::after,
+    :root {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @import "https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script";
+
+    html {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    body {
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 100%;
+      perspective: 1px;
+      transform-style: preserve-3d;
+      font-size: 62.5%;
+      font-family: "Overlock", Arial, Helvetica, sans-serif;
+    }
+
+    .author {
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      right: 0;
+      padding: 0.5rem 1rem;
+      background: #fafafa;
+      border-bottom-left-radius: 5px;
+      transition: 300ms;
+    }
+
+    .author a,
+    .author a:visited {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      transition: 300ms;
+    }
+
+    .author:hover,
+    .author:active {
+      box-shadow: 0 0 10px #33333350;
+      position: fixed;
+    }
+
+    footer {
+      width: 100%;
+      background-color: black;
+      color: whitesmoke;
+      text-align: right;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>OnePlus8T Cyberpunk 2077 Limited-Edition</h1>
+    </header>
+    <section class="section1">
+      <h1>Equipped with Qualcomm® Snapdragon™ 865 and 5G, 48 MP Quad Camera</h1>
+    </section>
+    <section class="section2">
+      <h1>Your frame-rate won’t drop, but your jaw will</h1>
+    </section>
+    <section class="section3">
+      <h1>Ultra Fast Charging. Ultra Smooth Scrolling.</h1>
+    </section>
+    <section class="section4">
+      <h1>
+        Warp Charge 65
+        <p>Day's power in 15 minutes</p>
+      </h1>
+    </section>
+
+    <section class="section5">
+      <h1>Never Settle</h1>
+    </section>
+    <div class="author" id="author">
+      <a
+        href="https://www.instagram.com/_viqaas/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link to author's Instagram's Profile"
+        >Mohammmed Viqaas</a
+      >
+    </div>
+    <footer>
+      <h4>By Mohammed Viqaas</h4>
+    </footer>
+  </body>
+</html>
